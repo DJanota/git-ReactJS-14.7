@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    height: 100vh;
+}
+
+body:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("./people.jpg");
+    background-size: cover;    
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
+    z-index: -1;
+}
+
+#app {
+    padding: 10px 0;
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contactForm {
+    text-align: center;
+}
+
+input, button {
+    margin: 0 5px;
+    border: 1px solid transparent;
+    padding: 3px 10px;
+}
+
+button {
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background: inherit;
+    border: 1px solid black;
+    color: black;
+}
+
+.contactsList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.contactItem {
+    margin: 5px;
+    padding: 30px 0;
+    width: 260px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    background: #304352;
+    background: -webkit-linear-gradient(bottom right,#304352,#162851);
+    background: -moz-linear-gradient(bottom right,#304352,#162851);
+    background: linear-gradient(bottom right,#304352,#162851);
+                  
+}
+
+.contactImage {
+    width: 128px;
+    height: 128px;
+    margin: 10px 50px;
+}
+
+a {
+    text-decoration: none;
+    color: lightgrey;
+}

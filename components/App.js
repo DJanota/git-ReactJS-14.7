@@ -1,3 +1,4 @@
+// data we will pass to the components
 var contacts = [
     {
         id: 1,
@@ -14,11 +15,12 @@ var contacts = [
     {
         id: 3,
         firstName: 'Zbigniew',
-        lastName: 'Koziol',
+        lastName: 'Kozioł',
         email: 'zbigniew.koziol@example.com',
-    }
+    },
 ];
 
+// object with the contact connected to the form
 var contactForm = {
     firstName: '',
     lastName: '',
@@ -26,12 +28,12 @@ var contactForm = {
 };
 
 var App = React.createClass({
-    render: function() {
+    render: function () {
         return (
-            React.createElement('div', {className: 'app'},
-                                React.createElement(ContactForm, {contact: contactForm}),
-                                React.createElement(Contacts, {items: contacts}, {})
-                               )
+            <div className={'app'}>
+                <ContactForm contact={contactForm} />
+                <Contacts items={contacts} />
+            </div>
         );
     }
 });
